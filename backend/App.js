@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const sanitizeReqBody = require("./src/middlewares/sanitizeReqBody");
 const path = require("path");
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
 const app = express();
 
 // Connect Database
@@ -18,6 +20,9 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cookieParser());
 // app.use(sanitizeReqBody);
+
+// Swagger documentation
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Import routes
 const ProductsRoutes = require("./src/routes/ProductsRoutes");

@@ -1,6 +1,6 @@
 const { execSync } = require("child_process");
 
-const commitMessage = "[ADD] AMS-2:Added git script"; 
+const commitMessage = "[ADD] AMS-3:Added swagger"; 
 try {
   console.log("Pulling latest changes...");
   execSync("git pull origin main", { stdio: "inherit" });
