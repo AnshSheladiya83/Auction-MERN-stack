@@ -1,0 +1,2066 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Shoppex",
+    "version": "1.0.0",
+    "description": "Shoppex Swagger Documentation"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8382"
+    }
+  ],
+  "paths": {
+    "/api/brands": {
+      "get": {
+        "summary": "Get All Brands",
+        "tags": [
+          "Brands"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create Brands",
+        "tags": [
+          "Brands"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/brands/{id}": {
+      "get": {
+        "summary": "Get Brands Details By Id",
+        "tags": [
+          "Brands"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Brands By Id",
+        "tags": [
+          "Brands"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "name": "sample_name",
+                "status": "sample_status",
+                "description": "sample_description",
+                "created_at": "sample_created_at",
+                "updated_at": "sample_updated_at",
+                "created_by": "sample_created_by",
+                "updated_by": "sample_updated_by",
+                "is_deleted": "sample_is_deleted",
+                "deleted_at": "sample_deleted_at",
+                "deleted_by": "sample_deleted_by",
+                "_id": "sample__id"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove Brands By Id",
+        "tags": [
+          "Brands"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": []
+            }
+          }
+        }
+      }
+    },
+    "/api/categories": {
+      "get": {
+        "summary": "Get All Categories",
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create Categories",
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer YOUR_JWT_TOKEN"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/categories/{id}": {
+      "get": {
+        "summary": "Get Categories Details By Id",
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Categories By Id",
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "name": "sample_name"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove Categories By Id",
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": []
+            }
+          }
+        }
+      }
+    },
+    "/api/products": {
+      "get": {
+        "summary": "Get All Products",
+        "tags": [
+          "Products"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create Products",
+        "tags": [
+          "Products"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/products/{id}": {
+      "get": {
+        "summary": "Get Products Details By Id",
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Products By Id",
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "productName": "sample_productName",
+                "category": "sample_category",
+                "buyingPrice": "sample_buyingPrice",
+                "sellingPrice": "sample_sellingPrice",
+                "brand": "sample_brand",
+                "status": "sample_status",
+                "unit": "sample_unit",
+                "weight": "sample_weight",
+                "description": "sample_description",
+                "created_at": "sample_created_at",
+                "updated_at": "sample_updated_at",
+                "created_by": "sample_created_by",
+                "updated_by": "sample_updated_by",
+                "is_deleted": "sample_is_deleted",
+                "deleted_at": "sample_deleted_at",
+                "deleted_by": "sample_deleted_by",
+                "_id": "sample__id"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove Products By Id",
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": []
+            }
+          }
+        }
+      }
+    },
+    "/api/products/{id}/like": {
+      "post": {
+        "summary": "Like or Unlike Product",
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/products/{id}/reviews": {
+      "post": {
+        "summary": "Add Review",
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "rating": "2",
+                "reviewText": "Some Review"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Like or Unlike Product Copy 2",
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/products/{id}/average-rating": {
+      "get": {
+        "summary": "Like or Unlike Product Copy 3",
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/units": {
+      "get": {
+        "summary": "Get All Units",
+        "tags": [
+          "Units"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create Units",
+        "tags": [
+          "Units"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "name": "sample_name",
+                "code": "sample_code",
+                "status": "sample_status",
+                "created_at": "sample_created_at",
+                "updated_at": "sample_updated_at",
+                "created_by": "sample_created_by",
+                "updated_by": "sample_updated_by",
+                "is_deleted": "sample_is_deleted",
+                "deleted_at": "sample_deleted_at",
+                "deleted_by": "sample_deleted_by",
+                "_id": "sample__id"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/units/{id}": {
+      "get": {
+        "summary": "Get Units Details By Id",
+        "tags": [
+          "Units"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Units By Id",
+        "tags": [
+          "Units"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "name": "sample_name",
+                "code": "sample_code",
+                "status": "sample_status",
+                "created_at": "sample_created_at",
+                "updated_at": "sample_updated_at",
+                "created_by": "sample_created_by",
+                "updated_by": "sample_updated_by",
+                "is_deleted": "sample_is_deleted",
+                "deleted_at": "sample_deleted_at",
+                "deleted_by": "sample_deleted_by",
+                "_id": "sample__id"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove Units By Id",
+        "tags": [
+          "Units"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": []
+            }
+          }
+        }
+      }
+    },
+    "/api/users": {
+      "get": {
+        "summary": "Get All Users",
+        "tags": [
+          "Users"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create Users",
+        "tags": [
+          "Users"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "email": "sample_email",
+                "password": "sample_password",
+                "fullName": "sample_fullName",
+                "isActive": "sample_isActive",
+                "isAdmin": "sample_isAdmin",
+                "role": "sample_role",
+                "profile_image_url": "sample_profile_image_url"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/users/{id}": {
+      "get": {
+        "summary": "Get Users Details By Id",
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Users By Id",
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "fullName": "sample_fullName2222"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove Users By Id",
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": []
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/signup": {
+      "post": {
+        "summary": "Signup",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "summary": "Login",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "email": "testuser@gmail.com",
+                "password": "12345678"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/app/login": {
+      "post": {
+        "summary": "Login via Mobile Phone",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "phone": "1234567891"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/verify-otp": {
+      "post": {
+        "summary": "Verify-Otp For Mobile Phone",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "phone": "1234567891",
+                "verificationOtp": "23933"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/resend-otp": {
+      "post": {
+        "summary": "OTP Resent",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "phone": "1234567890"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/verify-email": {
+      "post": {
+        "summary": "Verify-email",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/auth/forgot-password": {
+      "post": {
+        "summary": "Forgot-password",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "email": "wow2311ss@yopmail.com"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/reset-password": {
+      "post": {
+        "summary": "Reset-password",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "newPassword": "wow1234"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/change-password": {
+      "post": {
+        "summary": "Change-password",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "oldPassword": "wow1234",
+                "newPassword": "password"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/return-policy": {
+      "post": {
+        "summary": "Return Policy",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "email": "testuser@gmail.com",
+                "password": "12345678"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/privacy-policy": {
+      "post": {
+        "summary": "Privacy Policy",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "email": "testuser@gmail.com",
+                "password": "12345678"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/help": {
+      "post": {
+        "summary": "Help API",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "email": "testuser@gmail.com",
+                "password": "12345678"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/trending-searches": {
+      "post": {
+        "summary": "Trending Searches",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "email": "testuser@gmail.com",
+                "password": "12345678"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/you-might-want-to-search": {
+      "post": {
+        "summary": "You Might Want to Search Tags",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "email": "testuser@gmail.com",
+                "password": "12345678"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/delete-account": {
+      "post": {
+        "summary": "Delete Account",
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "email": "testuser@gmail.com",
+                "password": "12345678"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/orders": {
+      "get": {
+        "summary": "Get All Orders",
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create Orders",
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/orders/{id}": {
+      "get": {
+        "summary": "Get Orders Details By Id",
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Orders By Id",
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove Orders By Id",
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/returnorders": {
+      "get": {
+        "summary": "Get All ReturnOrders",
+        "tags": [
+          "ReturnOrders"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create ReturnOrders",
+        "tags": [
+          "ReturnOrders"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/returnorders/{id}": {
+      "get": {
+        "summary": "Get ReturnOrders Details By Id",
+        "tags": [
+          "ReturnOrders"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update ReturnOrders By Id",
+        "tags": [
+          "ReturnOrders"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove ReturnOrders By Id",
+        "tags": [
+          "ReturnOrders"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/{productId}/variations": {
+      "post": {
+        "summary": "Create a Product Variation",
+        "tags": [
+          "Product-Variations"
+        ],
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{ACCESS_TOKEN}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "variationsTags": [
+                  {
+                    "tagName": "Color",
+                    "value": "Red"
+                  },
+                  {
+                    "tagName": "Size",
+                    "value": "M"
+                  }
+                ],
+                "quantity": 100,
+                "sku": "SKU003",
+                "buyingPrice": 50,
+                "sellingPrice": 70
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Get All Variations of a Product",
+        "tags": [
+          "Product-Variations"
+        ],
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{ACCESS_TOKEN}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/variations/{variationId}": {
+      "put": {
+        "summary": "Update a Product Variation by ID",
+        "tags": [
+          "Product-Variations"
+        ],
+        "parameters": [
+          {
+            "name": "variationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{ACCESS_TOKEN}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "variationsTags": [
+                  {
+                    "tagName": "Color",
+                    "value": "Blue"
+                  },
+                  {
+                    "tagName": "Size",
+                    "value": "L"
+                  }
+                ],
+                "quantity": 150,
+                "buyingPrice": 60,
+                "sellingPrice": 90
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a Product Variation by ID",
+        "tags": [
+          "Product-Variations"
+        ],
+        "parameters": [
+          {
+            "name": "variationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{ACCESS_TOKEN}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/dashboard/stats": {
+      "get": {
+        "summary": "Dashboard Stats",
+        "tags": [
+          "Dashboard"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/dashboard/order-stats": {
+      "get": {
+        "summary": "Dashboard Order Stats",
+        "tags": [
+          "Dashboard"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/dashboard/recent-orders": {
+      "get": {
+        "summary": "Dashboard Recent Orders",
+        "tags": [
+          "Dashboard"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/dashboard/top-selling-products": {
+      "get": {
+        "summary": "Dashboard Top Selling Products",
+        "tags": [
+          "Dashboard"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/dashboard/sales-chart": {
+      "get": {
+        "summary": "Get Sales Chart Data",
+        "tags": [
+          "Dashboard"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{authToken}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/cart/add": {
+      "post": {
+        "summary": "Add to Cart",
+        "tags": [
+          "Cart"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{AUTH_TOKEN}}"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "productId": "PRODUCT_ID",
+                "quantity": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cart/remove": {
+      "post": {
+        "summary": "Remove from Cart ",
+        "tags": [
+          "Cart"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{AUTH_TOKEN}}"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "productId": "PRODUCT_ID"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cart": {
+      "get": {
+        "summary": "Get Cart",
+        "tags": [
+          "Cart"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{AUTH_TOKEN}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/api/cart/update": {
+      "put": {
+        "summary": "Update Cart Item Quantity ",
+        "tags": [
+          "Cart"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{AUTH_TOKEN}}"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "productId": "PRODUCT_ID",
+                "quantity": 5
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/wishlist/add": {
+      "post": {
+        "summary": "Add to Wishlist ",
+        "tags": [
+          "Wishlist"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{AUTH_TOKEN}}"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "productId": "PRODUCT_ID"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/wishlist/remove": {
+      "post": {
+        "summary": "Remove from Wishlist",
+        "tags": [
+          "Wishlist"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{AUTH_TOKEN}}"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": {
+                "productId": "PRODUCT_ID"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/wishlist": {
+      "get": {
+        "summary": "Get Wishlist",
+        "tags": [
+          "Wishlist"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {{AUTH_TOKEN}}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Brands",
+      "description": "APIs of the Brands section"
+    },
+    {
+      "name": "Categories",
+      "description": "APIs of the Categories section"
+    },
+    {
+      "name": "Products",
+      "description": "APIs of the Products section"
+    },
+    {
+      "name": "Units",
+      "description": "APIs of the Units section"
+    },
+    {
+      "name": "Users",
+      "description": "APIs of the Users section"
+    },
+    {
+      "name": "Auth",
+      "description": "APIs of the Auth section"
+    },
+    {
+      "name": "Orders",
+      "description": "APIs of the Orders section"
+    },
+    {
+      "name": "ReturnOrders",
+      "description": "APIs of the ReturnOrders section"
+    },
+    {
+      "name": "Product-Variations",
+      "description": "APIs of the Product-Variations section"
+    },
+    {
+      "name": "Dashboard",
+      "description": "APIs of the Dashboard section"
+    },
+    {
+      "name": "Cart",
+      "description": "APIs of the Cart section"
+    },
+    {
+      "name": "Wishlist",
+      "description": "APIs of the Wishlist section"
+    }
+  ]
+}
